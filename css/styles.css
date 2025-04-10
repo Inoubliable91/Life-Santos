@@ -1,0 +1,584 @@
+
+* {
+
+}
+
+body{
+    margin: 0 auto;
+}
+
+/* tete de page Acceuil */
+
+header.header {
+    display: flex;
+    align-items: center;
+}
+
+header.header img {
+    width: 70px;
+}
+
+Section.acc {
+       position: relative;
+       background: url("../Image/Acceuil.png");
+       background-size: cover;
+       background-position: center;
+       height: 95vh;
+       padding: 25px;
+}
+
+section.acc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ajuste la hauteur de la bande noire */
+    background: #0000009f; /* Noir avec transparence */
+    z-index: 0; /* Met la bande derrière */
+}
+
+/* Met le texte et le menu devant la bande noire */
+.header, .nav, .landing-page {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* page de bienvenue */
+
+.acc-tittle{
+    text-align: center;
+    color: #00ffff;
+    font-size: 60px;
+    margin-bottom: auto;
+    margin: 100px 0;
+}
+
+/* menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 1600px;
+    margin-left: 60px;
+}
+
+/* bouton */
+
+.page-accueil nav.nav a {
+    color: #00ffff;
+}
+
+/* Section catégories */
+.categories {
+    position: absolute;
+    bottom: -650px;
+    left: 40px;
+    max-width: 700px;
+    text-align: left;
+    z-index: 10;
+}
+
+.categories h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-decoration: none;
+    color: #48ff00;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories li {
+    font-size: 22px;
+    margin-bottom: 55px;
+    font-style: italic;
+    color: #00f7ff;
+}
+
+/* Section Présentation */
+.Présentation {
+    position: absolute;
+    bottom: -645px;
+    right: 1px;
+    max-width: 6500px;
+    text-align: left;
+    z-index: 10;
+}
+
+.Présentation h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-decoration: none;
+    color: #ffbb00;
+}
+
+.Présentation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Présentation li {
+    font-size: 22px;
+    margin-bottom: 55px;
+    font-style: italic;
+    color: #ffbb00;
+}
+
+/* Style général pour les liens */
+a {
+    color: #3498db; /* bleu clair */
+    text-decoration: none; /* enlève le soulignement */
+    transition: 0.3s ease; /* animation douce pour le hover */
+  }
+  
+  /* Lien déjà visité */
+  a:visited {
+    color: #3498db; /* même couleur que non visité */
+  }
+  
+  /* Quand on survole le lien */
+  a:hover {
+    color: #2980b9; /* bleu un peu plus foncé */
+    text-decoration: underline; /* petit effet sympa au survol */
+  }
+
+
+/* tete de page Règlement */
+
+header.header {
+    display: flex;
+    align-items: center;
+}
+
+header.header img {
+    width: 70px;
+}
+
+
+Section.reg {
+       position: relative;
+       background: url("../Image/Exo.png");
+       background-size: cover;
+       height: 45vh;
+       padding: 25px;
+
+}
+
+section.reg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh; /* Ajuste la hauteur de la bande noire */
+    background: #0000009f; /* Noir avec transparence */
+    z-index: 0; /* Met la bande derrière */
+}
+
+/* Met le texte et le menu devant la bande noire */
+.header, .nav, .landing-page {
+    position: relative;
+    z-index: 1;
+}
+
+/* page de bienvenue */
+
+.reg-tittle{
+    color: #ff8800;
+    font-size: 60px;
+    text-align: center;
+    margin: 100px 0;
+}
+
+/* menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 1600px;
+    margin-left: 60px;
+}
+
+.page-reglement nav.nav a {
+    color: #ff8800;
+}
+
+/* Summary */
+
+.reg-section {
+  position: relative; /* plus de absolute sinon bug */
+  margin: 60px auto;
+  max-width: 1200px;
+  width: 80%;
+  padding: 30px;
+  z-index: 2;
+}
+
+details {
+  background: #111; /* fond noir */
+  color: #00f7ff; /* texte bleu clair */
+  border: 1px solid #333; /* contour foncé */
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 18px 22px;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+details[open] {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00f7ff;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: "▼";
+  font-size: 16px;
+  color: #00f7ff;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+details p {
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff; /* texte lisible */
+}
+
+
+
+/* tete de page Illégal */
+
+header.header {
+    display: flex;
+    align-items: center;
+}
+
+header.header img {
+    width: 70px;
+}
+
+
+Section.illégal1 {
+       position: relative;
+       background: url("../Image/convoi.jpg");
+       background-size: cover;
+       height: 45vh;
+       padding: 25px;
+}
+
+section.illégal1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh; /* Ajuste la hauteur de la bande noire */
+    background: #0000009f; /* Noir avec transparence */
+    z-index: 0; /* Met la bande derrière */
+}
+
+/* Met le texte et le menu devant la bande noire */
+.header, .nav, .landing-page {
+    position: relative;
+    z-index: 1;
+}
+
+/* page de bienvenue */
+
+.illégal-tittle{
+    color: #f853d4;
+    font-size: 60px;
+    padding: 40px 660px;
+}
+
+/* menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 1600px;
+    margin-left: 60px;
+}
+
+.page-illégal nav.nav a {
+    color: #f853d4;
+}
+
+/* Summary */
+
+.illégal-section {
+  position: relative; /* plus de absolute sinon bug */
+  margin: 60px auto;
+  max-width: 1200px;
+  width: 80%;
+  padding: 30px;
+  z-index: 2;
+}
+
+details {
+  background: #111; /* fond noir */
+  color: #00f7ff; /* texte bleu clair */
+  border: 1px solid #333; /* contour foncé */
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 18px 22px;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+details[open] {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00f7ff;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: "▼";
+  font-size: 16px;
+  color: #00f7ff;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+details p {
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff; /* texte lisible */
+}
+
+
+
+
+/* tete de FDO */
+
+header.header {
+    display: flex;
+    align-items: center;
+}
+
+header.header img {
+    width: 70px;
+}
+
+
+Section.FDO {
+    position: relative;
+       background: url("../Image/FDO.jpg");
+       background-size: cover;
+       height: 45vh;
+       padding: 25px;
+}
+
+section.FDO::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh; /* Ajuste la hauteur de la bande noire */
+    background: #0202029f; /* Noir avec transparence */
+    z-index: 0; /* Met la bande derrière */
+}
+
+/* Met le texte et le menu devant la bande noire */
+.header, .nav, .landing-page {
+    position: relative;
+    z-index: 1;
+}
+
+/* page de bienvenue */
+
+.FDO-tittle{
+    color: #1100ff;
+    font-size: 60px;
+    padding: 40px 660px;
+}
+
+/* menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 1600px;
+    margin-left: 60px;
+}
+
+.page-FDO nav.nav a {
+    color: #1100ff;
+}
+
+/* Summary */
+
+.FDO-section {
+  position: relative; /* plus de absolute sinon bug */
+  margin: 60px auto;
+  max-width: 1200px;
+  width: 80%;
+  padding: 30px;
+  z-index: 2;
+}
+
+details {
+  background: #111; /* fond noir */
+  color: #00f7ff; /* texte bleu clair */
+  border: 1px solid #333; /* contour foncé */
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 18px 22px;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+details[open] {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00f7ff;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: "▼";
+  font-size: 16px;
+  color: #00f7ff;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+details p {
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff; /* texte lisible */
+}
+
+
+
+/* tete de page Debuter */
+
+header.header {
+    display: flex;
+    align-items: center;
+}
+
+header.header img {
+    width: 70px;
+}
+
+
+Section.debuter {
+    position: relative;
+       background: url("../Image/Debuter.jpg");
+       background-size: cover;
+       height: 95vh;
+       padding: 25px;
+}
+
+section.debuter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ajuste la hauteur de la bande noire */
+    background: #0202029f; /* Noir avec transparence */
+    z-index: 0; /* Met la bande derrière */
+}
+
+/* Met le texte et le menu devant la bande noire */
+.header, .nav, .landing-page {
+    position: relative;
+    z-index: 1;
+}
+
+/* page de bienvenue */
+
+.debuter-tittle{
+    color: #00ff40;
+    font-size: 60px;
+    padding: 40px 460px;
+}
+
+/* menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 1600px;
+    margin-left: 60px;
+}
+
+.page-debuter nav.nav a {
+    color: #00ff40;
+}
